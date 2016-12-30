@@ -1,0 +1,176 @@
+* {
+
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 17px;
+    font-family: 'Ubuntu Mono';
+    color: #191970;
+
+
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+html, body {
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: auto;
+}
+
+body {
+    padding-top: 50px;
+    background: #F5FFFA;
+}
+
+header{
+    display: block;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #1E90FF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header *{
+    display: inline-block;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: default;
+}
+header .user_block{
+    display: inline-block;
+    float: right;
+    padding-left: 0;
+    padding-right: 50px;
+}
+header .list{
+    cursor: pointer;
+    font-weight: 600;
+}
+header .user_block .logout,
+header .user_block .login,
+header .user_block .register,
+header .add_rec{
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 0px;
+    padding-right: 0px;
+    float:none;
+}
+a{
+    text-decoration: underline;
+}
+#brand {
+    font-size: 25px;
+    font-weight: bold;
+    color: navy;
+}
+
+div.error{
+    color: red;
+}
+
+#add_new_book_modal{
+    height: 40px;
+    float: none;
+    text-align: center;
+    width:  100px;
+    display: inline;
+    margin-top: 13px;
+    font-size: 14px;
+    background-color: navy;
+    cursor:pointer;
+}
+
+div.book-in-list{
+    border: solid black 1px;
+    margin-top: 10px;
+    height: 300px;
+}
+div.book-in-list > img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border: 2px dashed #555;
+    height: 280px;
+    width: 320px;
+    float: left;
+}
+div.book-in-list > .href-to-book{
+    font-size: 36px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+div.book-in-list >  .description-book{
+    font-size: large;
+    font-style: italic;
+    padding-left: 400px;
+    margin-top: 20px;
+}
+
+
+
+
+div.book-solopage {
+    margin-top: 10px;
+    display:inline;
+}
+div.book-solopage > img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border: 2px dashed #555;
+    height: 400px;
+    width: 500px;
+    float: left;
+}
+div.book-solopage > .href-to-book{
+    font-size: 36px;
+    margin-left: 550px;
+    cursor: pointer;
+}
+div.book-solopage > .description-book{
+    font-size: large;
+    font-style: italic;
+    padding-left: 600px;
+    margin-top: 20px;
+    margin-bottom: 350px;
+}
+.ordered{
+    margin-left: 10px;
+    display: inline;
+}
+
+.order {
+    background-color: green;
+}
+
+.remove-order{
+    background-color: red;
+}
+
+.order, .remove-order{
+    color: #fff;
+
+}
+
+*.hide{
+    display:none; !important;
+}
+
+.margin-span{
+    margin-left:10px;
+}

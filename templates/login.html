@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="error">{{ error|striptags }}</div>
+    <div class="login_block">
+        <h5 class="block_name">Log in</h5>
+        <form method="POST" name="login_form"
+        id="login_form">
+            {% csrf_token %}
+            {{ login_form.as_p}}
+            <button type="submit">Log in</button>
+        </form>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

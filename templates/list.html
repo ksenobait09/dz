@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% for book in books %}
+        <div class="book-in-list">
+            <img src="{{ book.image.url }}">
+            <a class="href-to-book"href = {% url 'single_book' book_id=book.id %}>{{ book.name }} {{ book.author }}</a>
+            <br>
+            <div class="description-book">{{ book.description }}</div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+
+

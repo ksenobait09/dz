@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="error">{{ error|striptags }}</div>
+    <div class="reg_block">
+        <h5 class="block_name">Registration</h5>
+        <form name="registration_form" method="POST">
+            {% csrf_token  %}
+            {{ registration_form.as_p}}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+{% endblock %}
+

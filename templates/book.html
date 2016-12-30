@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="book-solopage">
+            <img src="{{ book.image.url }}">
+            <div class="href-to-book">{{ book.name }} {{ book.author }}</div>
+            <br>
+            <div class="description-book">{{ book.description }}</div>
+        </div>
+        <hr>
+        <div class="ordered">
+            {% if authorized %}
+                {% if status %}
+                    <button class="remove-order" data-bookid="{{ book.id }}">Remove order</button>
+                    <button class="order hide" data-bookid="{{ book.id }}">Order</button>
+                {% else %}
+                    <button class="remove-order hide" data-bookid="{{ book.id }}">Remove order</button>
+                    <button class="order" data-bookid="{{ book.id }}">Order</button>
+                {% endif %}
+            {% endif %}
+            <br>
+            <br>
+            <span class="margin-span">Ordered this book: </span>
+
+            <div id="users">
+                {% for user in users %}{% if not forloop.first %}, {% endif %}{{ user|striptags }}{% endfor %}
+            </div>
+        </div>
+        <script>var status ="{{ status }}"</script>
+{% endblock %}
+
+

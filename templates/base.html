@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Event Dream</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Remodal-master/dist/remodal.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Remodal-master/dist/remodal-default-theme.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<script type="text/javascript" src="{% static 'jquery-3.1.1.js' %}"></script>
+<script src="{% static 'Remodal-master/dist/remodal.min.js' %}"></script>
+<script src="{% static 'js/js.js' %}"></script>
+<body>
+    {% include 'modal.html' %}
+    <header>
+        <div id="brand">SkyLibrary</div>
+        <a href="{% url 'main_page' %}" class="list">List of Books</a>
+        {% if authorized %}
+            <div id="add_new_book_modal">New book</div>
+            <div class="user_block">
+                <div class="user_name">{{ user.name }}</div>
+                <a class="logout" href="{% url 'login_url' %}">Log out</a>
+            </div>
+        {% else %}
+            <div class="user_block">
+                <div class="user_name">You watch this page as a guest</div>
+                <div class="login_register">
+                    <a href="{% url 'login_url' %}" class="login">Log in</a>/
+                    <a href="{% url 'register_url' %}" class="register">Sign up</a>
+                </div>
+            </div>
+        {% endif %}
+    </header>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

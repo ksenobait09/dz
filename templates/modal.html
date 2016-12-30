@@ -1,0 +1,9 @@
+<div data-remodal-id="modal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+        <form id="new_book_form"  method="POST" action="/add-new-book/" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ new_book_form.as_p}}
+        </form>
+    <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+    <button data-remodal-action="confirm" class="remodal-confirm">Add</button>
+</div>
